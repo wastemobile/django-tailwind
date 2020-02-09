@@ -9,9 +9,10 @@ def test_tailwind_init_generates_theme_app(cleanup_theme_app, settings):
 
 
 def test_tailwind_install_and_build(cleanup_theme_app, settings):
-    call_command('tailwind', 'install')
     call_command('tailwind', 'init', 'theme')
     settings.INSTALLED_APPS += ['theme']
+
+    call_command('tailwind', 'install')
 
     assert os.path.isfile(
         os.path.join(settings.BASE_DIR, 'theme', 'static_src', 'package.json')), 'Tailwind has been installed from npm'
