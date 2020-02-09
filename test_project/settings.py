@@ -54,3 +54,5 @@ DATABASES = {
 }
 
 STATIC_URL = '/static/'
+
+TAILWIND_APP_NAME = 'theme'
