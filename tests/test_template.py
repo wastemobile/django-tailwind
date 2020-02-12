@@ -1,4 +1,3 @@
-from django.core.management import call_command
 from django.template.loader import render_to_string
 
 
