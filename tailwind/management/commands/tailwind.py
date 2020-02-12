@@ -61,6 +61,7 @@ Usage example:
                 )
             )
         except Exception as err:
+            breakpoint()
             raise CommandError(err)
 
     def handle_install_command(self, **options):
