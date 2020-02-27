@@ -3,6 +3,7 @@
   "description": "",
   "scripts": {
     "build": "npm run build-clean && npm run build-postcss && npm run build-cleancss",
+    "deploy": "npm run build --production"
     "build-postcss": "postcss --config . --map false --output ../static/css/styles.min.css ./src/styles.scss",
     "build-cleancss": "cleancss -o ../static/css/styles.min.css ../static/css/styles.min.css",
     "build-clean": "rimraf ../static/css",
@@ -12,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "tailwindcss": "^1.2.0",
     "autoprefixer": "^9.7.4",
     "clean-css-cli": "^4.3.0",
