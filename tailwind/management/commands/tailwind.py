@@ -71,6 +71,9 @@ Usage example:
 
     def handle_start_command(self, **options):
         self.npm_command("run", "start")
+        
+    def handle_deploy_command(self, **options):
+        self.npm_command("run", "deploy")
 
     def npm_command(self, *args):
         try:
