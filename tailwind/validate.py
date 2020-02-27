@@ -12,7 +12,7 @@ class ValidationError(Exception):
 
 class Validations:
     def acceptable_label(self, label):
-        if label not in ["init", "install", "npm", "start", "build"]:
+        if label not in ["init", "install", "npm", "start", "build", "deploy"]:
 
             raise ValidationError(f"Subcommand {label} doesn't exist")
 
